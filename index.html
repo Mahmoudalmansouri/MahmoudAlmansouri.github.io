@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>X-Ray Scattering</title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="favicon.png?">
+  <link href="style.css" rel="stylesheet">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+</head>
+
+<body>
+  <div><h3><strong>X-Ray Scattering Equation Plotting</strong></h3></div>
+  <br></br>
+  
+  <pre style="text-align: left;">       Please, select an equation:</pre>
+
+  <div>
+    <input type="radio" id="firstEq" name="drone"
+         checked onchange="toggleZ();">
+         <label>`y=\frac{\pi-\cos^{-1}\left(\frac{\left(R-Z\right)+\frac{d}{2}\cdot\sin\left(x+k\right)}{R}\right)+\frac{1}{2}\cdot\sin\left(2\cdot\cos^{-1}\left(\frac{\left(R-Z\right)+\frac{d}{2}\cdot\sin\left(x+k\right)}{R}\right)\right)}{\pi}`</label>
+  </div>
+
+  <div>
+    <input type="radio" id="secondEq" name="drone" onchange="toggleZ();">
+    <label>`y=\frac{\pi-\cos^{-1}\left(\frac{\left(R-x\right)+\frac{d}{2}\cdot\sin\left(k\right)}{R}\right)+\frac{1}{2}\cdot\sin\left(2\cdot\cos^{-1}\left(\frac{\left(R-x\right)+\frac{d}{2}\cdot\sin\left(k\right)}{R}\right)\right)}{\pi}`</label>
+  </div>
+
+  <pre style="text-align: left;">       Settings</pre>
+  <hr width=92%  align=center>
+  <!--R-->
+  <div class="row">
+  <div class="column">*Initial value  =  1*</div>
+  <div class="column">R  =</div>
+  <div class="column">
+    <div class="slidecontainer">
+      <input type="range" id="slidInput1" min="-10" max="10" value="1" class="slider1" step="0.1" onchange="updateInputBox1(this.value);">
+    </div>
+  </div>
+  <div class="column">
+    <input type="number" id="numInput1" min="-10" max="10" value="1"  step="0.1" onchange="updateInputSlider1(this.value);">
+  </div>
+  </div>
+
+  <!--Z-->
+  <div class="row" id="zRow">
+  <div class="column">*Initial value  =  1*</div>
+  <div class="column">Z  =</div>
+  <div class="column">
+    <div class="slidecontainer">
+      <input type="range" id="slidInput2" min="-10" max="10" value="1" class="slider2" step="0.1" onchange="updateInputBox2(this.value);">
+    </div>
+  </div>
+  <div class="column">
+    <input type="number" id="numInput2" min="-10" max="10" value="1"  step="0.1" onchange="updateInputSlider2(this.value);">
+  </div>
+  </div>
+
+  <!--d-->
+  <div class="row">
+  <div class="column">*Initial value  =  1*</div>
+  <div class="column">d  =</div>
+  <div class="column">
+    <div class="slidecontainer">
+      <input type="range" id="slidInput3" min="-10" max="10" value="1" class="slider3" step="0.1" onchange="updateInputBox3(this.value);">
+    </div>
+  </div>
+  <div class="column">
+    <input type="number" id="numInput3" min="-10" max="10" value="1"  step="0.1" onchange="updateInputSlider3(this.value);">
+  </div>
+  </div>
+
+  <!--k-->
+  <div class="row">
+  <div class="column">*Initial value  =  1*</div>
+  <div class="column">k  =</div>
+  <div class="column">
+    <div class="slidecontainer">
+      <input type="range" id="slidInput4" min="-10" max="10" value="1" class="slider4" step="0.1" onchange="updateInputBox4(this.value);">
+    </div>
+  </div>
+  <div class="column">
+    <input type="number" id="numInput4" min="-10" max="10" value="1"  step="0.1" onchange="updateInputSlider4(this.value);">
+  </div>
+  </div>
+  <hr width=92%  align=center>
+
+  <br></br>
+  <div id="plot" style="width:800px;height:450px;"></div>
+
+  <footer><p>By Mahmoud Almansouri | mahmoudalmansouri0@gmail.com</p> </footer>
+
+  <script src="myscripts.js"></script>
+</body>
+
+</html>
