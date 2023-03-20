@@ -62,6 +62,7 @@ function resetSettings() {
   document.getElementById("numInput2").value = 1
   document.getElementById("numInput3").value = 1
   document.getElementById("numInput4").value = 1
+  document.getElementById("numInput5").value = 1
   document.getElementById("slidInput1").value = 1
   document.getElementById("slidInput2").value = 1
   document.getElementById("slidInput3").value = 1
@@ -101,14 +102,14 @@ window.onload = function plotData() {
 function updatePlot() {
   var r = parseFloat(document.getElementById("numInput1").value)
   var z = parseFloat(document.getElementById("numInput2").value)
-  var d = parseFloat(document.getElementById("numInput3").value)
-  var k = parseFloat(document.getElementById("numInput4").value)
+  var k = parseFloat(document.getElementById("numInput3").value)
+  var d = parseFloat(document.getElementById("numInput4").value)
   var l = parseFloat(document.getElementById("numInput5").value)
 
   var x = new Array()
   var y = new Array()
 
-  for (var i = -1000; i <= 1000; i += 0.1) {
+  for (var i = -5000; i <= 5000; i += 0.1) {
     x.push(i)
     y.push(runEquation(r, z, d, k, i, l))
   }
