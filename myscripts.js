@@ -66,6 +66,7 @@ function resetSettings() {
   document.getElementById("slidInput2").value = 1
   document.getElementById("slidInput3").value = 1
   document.getElementById("slidInput4").value = 1
+  document.getElementById("slidInput5").value = 1
 }
 
 // The equation
