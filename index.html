@@ -22,12 +22,12 @@
   <div>
     <input type="radio" id="firstEq" name="drone"
          checked onchange="toggleZ();">
-         <label>`y=\frac{\pi-\cos^{-1}\left(\frac{\left(R-Z\right)+\frac{d}{2}\cdot\sin\left(x+k\right)}{R}\right)+\frac{1}{2}\cdot\sin\left(2\cdot\cos^{-1}\left(\frac{\left(R-Z\right)+\frac{d}{2}\cdot\sin\left(x+k\right)}{R}\right)\right)}{\pi}`</label>
+         <label>`y=\frac{\pi-\cos^{-1}\left(\frac{\left(L-Z\right)+\frac{d}{2}\cdot\sin\left(x+k\right)}{R}\right)+\frac{1}{2}\cdot\sin\left(2\cdot\cos^{-1}\left(\frac{\left(L-Z\right)+\frac{d}{2}\cdot\sin\left(x+k\right)}{R}\right)\right)}{\pi}`</label>
   </div>
 
   <div>
     <input type="radio" id="secondEq" name="drone" onchange="toggleZ();">
-    <label>`y=\frac{\pi-\cos^{-1}\left(\frac{\left(R-x\right)+\frac{d}{2}\cdot\sin\left(k\right)}{R}\right)+\frac{1}{2}\cdot\sin\left(2\cdot\cos^{-1}\left(\frac{\left(R-x\right)+\frac{d}{2}\cdot\sin\left(k\right)}{R}\right)\right)}{\pi}`</label>
+    <label>`y=\frac{\pi-\cos^{-1}\left(\frac{\left(L-x\right)+\frac{d}{2}\cdot\sin\left(k\right)}{R}\right)+\frac{1}{2}\cdot\sin\left(2\cdot\cos^{-1}\left(\frac{\left(L-x\right)+\frac{d}{2}\cdot\sin\left(k\right)}{R}\right)\right)}{\pi}`</label>
   </div>
 
   <pre style="text-align: left;">       Settings</pre>
@@ -74,18 +74,34 @@
   </div>
   </div>
 
+    <!--d-->
+    <div class="row">
+      <div class="column">*Initial value  =  1*</div>
+      <div class="column">d  =</div>
+      <div class="column">
+        <div class="slidecontainer">
+          <input type="range" id="slidInput4" min="-10" max="10" value="1" class="slider4" step="0.1" onchange="updateInputBox3(this.value);">
+        </div>
+      </div>
+      <div class="column">
+        <input type="number" id="numInput4" min="-10" max="10" value="1"  step="0.1" onchange="updateInputSlider3(this.value);">
+      </div>
+      </div>
+
   <!--k-->
   <div class="row">
   <div class="column">*Initial value  =  1*</div>
-  <div class="column">k  =</div>
+  <div class="column">l  =</div>
   <div class="column">
     <div class="slidecontainer">
-      <input type="range" id="slidInput4" min="-10" max="10" value="1" class="slider4" step="0.1" onchange="updateInputBox4(this.value);">
+      <input type="range" id="slidInput5" min="-10" max="10" value="1" class="slider5" step="0.1" onchange="updateInputBox5(this.value);">
     </div>
   </div>
   <div class="column">
-    <input type="number" id="numInput4" min="-10" max="10" value="1"  step="0.1" onchange="updateInputSlider4(this.value);">
+    <input type="number" id="numInput5" min="-10" max="10" value="1"  step="0.1" onchange="updateInputSlider5(this.value);">
   </div>
+
+  
   </div>
   <hr width=92%  align=center>
 
